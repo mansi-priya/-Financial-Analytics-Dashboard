@@ -2,21 +2,21 @@ Financial Analytics Dashboard
 
 A full-stack financial analytics application for tracking and analyzing company transactions, featuring interactive dashboards, advanced filtering/search, and configurable CSV export.
 
-Table of Contents
-Features
-Tech Stack
-Project Structure
-Prerequisites
-Setup Instructions
-Environment Variables
-Seeding Sample Data
-Running the Application
-Usage Examples
-API Documentation
-CSV Export Format
-Scripts Reference
-Troubleshooting
-Features
+1.) Table of Contents
+2.) Features
+3.)Tech Stack
+4.) Project Structure
+5.) Prerequisites
+6.) Setup Instructions
+7.) Environment Variables
+8.) Seeding Sample Data
+9.) Running the Application
+10.) Usage Examples
+11.) API Documentation
+12.) CSV Export Format
+13.) Scripts Reference
+14.) Troubleshooting
+15) Features
 
 Authentication & Security
 

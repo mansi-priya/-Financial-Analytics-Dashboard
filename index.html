@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Penta Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./app.js"></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="brand-wrap">
+          <div class="brand-mark">
+            <span class="mark-green"></span>
+            <span class="mark-gold"></span>
+            <span class="mark-blue"></span>
+          </div>
+          <div class="brand-name">Penta</div>
+        </div>
+
+        <nav class="nav">
+          <button class="nav-item active">
+            <span class="icon grid-icon"></span>
+            <span>Dashboard</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon card-icon"></span>
+            <span>Transactions</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon wallet-icon"></span>
+            <span>Wallet</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon chart-icon"></span>
+            <span>Analytics</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon person-icon"></span>
+            <span>Personal</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon message-icon"></span>
+            <span>Message</span>
+          </button>
+          <button class="nav-item">
+            <span class="icon settings-icon"></span>
+            <span>Setting</span>
+          </button>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <h1>Dashboard</h1>
+          <div class="topbar-actions">
+            <div class="search-box">
+              <span>Search...</span>
+              <span class="search-icon"></span>
+            </div>
+            <button class="bell-button" aria-label="notifications"></button>
+            <div class="profile-pill">
+              <div class="profile-avatar">A</div>
+            </div>
+          </div>
+        </header>
+
+        <section class="metrics-row">
+          <div class="metric-card">
+            <div class="metric-label">Balance</div>
+            <div class="metric-value" id="balanceValue">$ 0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Revenue</div>
+            <div class="metric-value green" id="revenueValue">$ 0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Expenses</div>
+            <div class="metric-value" id="expenseValue">$ 0</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-label">Savings</div>
+            <div class="metric-value" id="savingsValue">$ 0</div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="chart-panel panel">
+            <div class="panel-header">
+              <h2>Overview</h2>
+              <div class="segmented-control">
+                <button class="tag active">Income</button>
+                <button class="tag">Expenses</button>
+                <button class="tag">Monthly</button>
+              </div>
+            </div>
+
+            <div class="chart-area">
+              <div class="y-axis">
+                <span>$1100</span>
+                <span>$900</span>
+                <span>$700</span>
+                <span>$500</span>
+              </div>
+
+              <div class="chart-frame">
+                <svg viewBox="0 0 560 210" preserveAspectRatio="none" aria-label="Overview chart">
+                  <g class="grid-lines">
+                    <line x1="0" y1="20" x2="560" y2="20" />
+                    <line x1="0" y1="70" x2="560" y2="70" />
+                    <line x1="0" y1="120" x2="560" y2="120" />
+                    <line x1="0" y1="170" x2="560" y2="170" />
+                  </g>
+                  <path class="income-line" d="M0,110 C70,130 100,70 140,95 S220,140 260,80 S330,50 390,110 S470,130 560,75" />
+                  <path class="expense-line" d="M0,120 C70,90 130,150 180,100 S260,50 300,95 S360,150 430,80 S510,40 560,95" />
+                  <g class="chart-mark">
+                    <circle cx="280" cy="95" r="6" />
+                    <text x="318" y="100">$224.00</text>
+                  </g>
+                </svg>
+                <div class="x-axis">
+                  <span>Jan</span>
+                  <span>Feb</span>
+                  <span>Mar</span>
+                  <span>Apr</span>
+                  <span>May</span>
+                  <span>Jun</span>
+                  <span>Jul</span>
+                  <span>Aug</span>
+                  <span>Sep</span>
+                  <span>Oct</span>
+                  <span>Nov</span>
+                  <span>Dec</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="transactions-panel panel">
+            <div class="panel-header small-header">
+              <h2>Recent Transaction</h2>
+              <a href="#">See all</a>
+            </div>
+
+            <div class="txn-list" id="recentTransactions"></div>
+          </div>
+        </section>
+
+        <section class="table-panel panel">
+          <div class="table-header">
+            <h2>Transactions</h2>
+            <div class="table-controls">
+              <div class="search-field">Search for anything...</div>
+              <div class="filter-pill">10 May - 20 May</div>
+            </div>
+          </div>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="transactionsTableBody"></tbody>
+          </table>
+        </section>
+
+        <div class="floating-callout">
+          <div class="callout-box">
+            <span>Sign up to comment, edit, inspect and more.</span>
+            <button>Sign up</button>
+            <div class="google-button">
+              <span class="google-g">G</span>
+              <span>Continue</span>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

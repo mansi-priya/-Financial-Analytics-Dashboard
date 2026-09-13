@@ -55,6 +55,7 @@ CSV	json2csv / fast-csv
 Adjust this table to match the exact libraries used in your implementation.
 
 Project Structure
+
 financial-analytics-dashboard/
 ├── client/                     # React + TypeScript frontend
 │   ├── src/
@@ -82,6 +83,7 @@ financial-analytics-dashboard/
 ├── README.md
 └── docs/
     └── API.md                  # Detailed API documentation
+    
 Prerequisites
 Node.js v18+ and npm/yarn
 MongoDB v6+ (local instance or MongoDB Atlas)

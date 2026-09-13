@@ -52,38 +52,9 @@ Database	MongoDB (Mongoose ODM)
 Auth	JSON Web Tokens (JWT)
 CSV	json2csv / fast-csv
 
-Adjust this table to match the exact libraries used in your implementation.
 
-Project Structure
 
-financial-analytics-dashboard/
-├── client/                     # React + TypeScript frontend
-│   ├── src/
-│   │   ├── components/         # Reusable UI components (charts, table, modals, etc.)
-│   │   ├── pages/               # Login, Dashboard pages
-│   │   ├── services/            # API client / axios instances
-│   │   ├── context or store/    # Auth & app state management
-│   │   ├── types/                # Shared TypeScript interfaces
-│   │   └── App.tsx
-│   ├── package.json
-│   └── .env
-├── server/                     # Node + Express + TypeScript backend
-│   ├── src/
-│   │   ├── controllers/         # Route handlers
-│   │   ├── models/               # Mongoose schemas (Transaction, User)
-│   │   ├── routes/                # Express routers
-│   │   ├── middleware/            # JWT auth, error handling
-│   │   ├── utils/                  # CSV generation helpers
-│   │   ├── config/                  # DB connection, env config
-│   │   └── index.ts
-│   ├── data/
-│   │   └── sample-transactions.json
-│   ├── package.json
-│   └── .env
-├── README.md
-└── docs/
-    └── API.md                  # Detailed API documentation
-    
+
 Prerequisites
 Node.js v18+ and npm/yarn
 MongoDB v6+ (local instance or MongoDB Atlas)
